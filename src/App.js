@@ -8,7 +8,7 @@ export default class App extends Component {
                 <button>+</button>
                 <button>-</button>
                 <button>redux-second branch</button>
-                <p>second_branch new</p>
+                <p>secondfghfgh_branch new</p>
             </div>
         );
     }

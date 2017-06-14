@@ -7,6 +7,7 @@ export default class App extends Component {
                 <div>{ this.props.counter }</div>
                 <button>+</button>
                 <button>-</button>
+                <button>redux-second branch</button>
             </div>
         );
     }

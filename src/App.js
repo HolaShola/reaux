@@ -9,6 +9,7 @@ class UserDetails extends Component {
                 <div>{this.props.user.name}</div>
                 <div>{this.props.user.age}</div>
                 <div>{this.props.user.company}</div>
+                <button>click-me</button>
             </div>
         )
     }

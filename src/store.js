@@ -1,12 +1,12 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import data from './data.json';
 import appReducer from './reducer';
 
-const store = createStore(appReducer, applyMiddleware(
-    logger,
-    dataLoadingMiddleware
-    )
-);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(appReducer, composeEnhancers(
+    applyMiddleware(logger,dataLoadingMiddleware)
+));
 
 function logger ({ getState }) {
     return function (next) {

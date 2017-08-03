@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import User from './actions/User'
+
+class UserDetails extends Component {
+    render() {
+        return (
+            <div>
+                <div>{this.props.user.name}</div>
+                <div>{this.props.user.age}</div>
+                <div>{this.props.user.company}</div>
+            </div>
+        )
+    }
+}
 
 class UsersList extends Component {
     render() {
         const users = this.props.users.map(user => {
             return (
-                <li key={user._id} onClick={() => this.props.onUserClick(user)}>
+                <li
+                    key = {user._id}
+                    onClick = {
+                        () => {
+                            console.log('click on user');
+                            this.props.onUserClick(user)
+                        }
+                    }
+                >
                     {user.name}        
                 </li>
             )
@@ -43,12 +64,14 @@ class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        users: state.users
+        users: state.users,
+        currentUser: state.users.find(user => user._id == state.currentUserId)
     }
 }
 
 function mapActionsToProps(dispatch) {
     return {
+        // setCurrentUser : (user) =>  dispatch(User.getActionCurrent(user))
         setCurrentUser(user) {
             dispatch({
                 type: 'SET_CURRENT_USER_ID',

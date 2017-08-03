@@ -13,5 +13,5 @@ ReactDOM.render(
 
 setTimeout(() => {
     store.dispatch({ type: 'LOAD_DATA' });
-}, 2000);
+}, 1000);
 

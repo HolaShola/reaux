@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import User from './actions/User'
-
-class UserDetails extends Component {
-    render() {
-        return (
-            <div>
-                <div>{this.props.user.name}</div>
-                <div>{this.props.user.age}</div>
-                <div>{this.props.user.company}</div>
-            </div>
-        )
-    }
-}
+import UserDetails from './components/user-details';
 
 class UsersList extends Component {
     render() {

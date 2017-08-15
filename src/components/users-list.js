@@ -7,10 +7,7 @@ class UsersList extends Component {
                 <li
                     key = {user._id}
                     onClick = {
-                        () => {
-                            console.log('click on user');
-                            this.props.onUserClick(user)
-                        }
+                        () => {this.props.onUserClick(user)}
                     }
                 >
                     {user.name}        

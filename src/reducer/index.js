@@ -6,7 +6,7 @@ import TodoListReducer from './todo-list-reducer';
 const appReducer = combineReducers({
     users: usersReducer,
     currentUserId: CurrentUserReducer,
-    todoList: TodoListReducer,        
+    todoList: TodoListReducer,       
 });
 
 export default appReducer;

@@ -13,7 +13,7 @@ class TodoList extends Component {
         return (
             <ul>
                 {
-                    this.props.todoList.map(item => <TodoItem name={item} onClick={() => this.props.add()} />)
+                    this.props.todoList.map(item => <TodoItem name={item} onClick={() => this.props.add(item)} />)
                 }
             </ul>
         )
@@ -28,8 +28,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        add() {
-            dispatch({ type: 'ADD'})
+        add(item) {
+            dispatch({ type: 'DELETE', payload: item })
         }
     };
 }

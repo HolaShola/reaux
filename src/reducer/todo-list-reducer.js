@@ -5,7 +5,10 @@ export default function TodoListReducer(state = [], action) {
                 ...state,
                 action.payload
             ]
-            
+        case 'DELETE':
+            return [
+                ...state.filter(todo => todo !== action.payload)     
+            ]    
         default: return state;     
     }
 }

@@ -44,4 +44,13 @@ import unittest
 
 pylint
 
+#перезагрузка модулей
+import importlib
+importlib.reload
+
+#пути поиска модулей
+import sys
+sys.path
+
+site-packages
 

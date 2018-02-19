@@ -6,7 +6,7 @@
 """
 import _thread as thread
 stdoutmutex = thread.allocate_lock()
-exitmutexes = [False] * 10
+exitmutexes = [False] * 5
 
 def counter(myId, count):
     for i in range(count):
@@ -15,8 +15,8 @@ def counter(myId, count):
         stdoutmutex.release()
     exitmutexes[myId] = True # сигнал главному потоку
 
-for i in range(10):
-    thread.start_new_thread(counter, (i, 100))
+for i in range(5):
+    thread.start_new_thread(counter, (i, 10))
 
 while False in exitmutexes: pass
 

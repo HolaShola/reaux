@@ -1,8 +1,9 @@
-import os, sys, glob
+import os, sys, glob, pprint
 
 dirname = r'***' # path to the directory
+file_extension = '*.js'
 
-list_of_files = glob.glob(dirname + os.sep + '*.py')
+list_of_files = glob.glob(dirname + os.sep + file_extension)
 all_sizes = []
 
 for filename in list_of_files:
@@ -10,4 +11,5 @@ for filename in list_of_files:
     all_sizes.append((filesize, filename))
 
 all_sizes.sort()
-print(all_sizes[-1])
+pprint.pprint(all_sizes)
+pprint.pprint(all_sizes[-1])

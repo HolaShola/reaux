@@ -1,24 +1,23 @@
 """
 Отыскивает наибольший файл с исходным программным кодом в дереве каталогов.
 """
-
 import os, sys, pprint
 
-dirname = r'D:\REACT\react_redux\src\doc\pp' # path to the directory
+dirname = r'***'           # path to the directory
 file_extension = '.js'
 
 all_files = []
-all_sizes = []
 
 def lister(root_dir):
     for(thisdir, dirnames, filenames) in os.walk(root_dir):
-        # pprint.pprint(thisdir)
-        # pprint.pprint(dirnames)
-        # pprint.pprint(filenames)
-        for file in filenames:
-            if file.endswith == file_extension:
-                all_files.append(file)
+        for filename in filenames:
+            if filename.endswith(file_extension):
+                fullname = os.path.join(thisdir, filename)
+                filesize = os.stat(fullname).st_size
+                all_files.append((filesize, fullname))
+
+    all_files.sort()
     pprint.pprint(all_files)
+    pprint.pprint(all_files[-1])
 
 lister(dirname)
-

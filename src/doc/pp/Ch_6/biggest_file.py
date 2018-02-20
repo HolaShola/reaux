@@ -1,6 +1,6 @@
 import os, sys, glob, pprint
 
-dirname = r'***' # path to the directory
+dirname = r'***'          # path to the directory
 file_extension = '*.js'
 
 list_of_files = glob.glob(dirname + os.sep + file_extension)

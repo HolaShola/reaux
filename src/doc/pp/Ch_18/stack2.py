@@ -35,14 +35,14 @@ class Stack:
         return len(self.stack) # len(instance), not instance
     
     def __add__(self, other):
-        return Stack(self.stack + other.stack) # instance1 + instance2
+        return Stack(self.stack + other.stack) 
     
     def __mul__(self, reps):
-        return Stack(self.stack * reps) # instance * reps
+        return Stack(self.stack * reps)
     
-    def __getitem__(self, offset): # смотрите также __iter__
-        return self.stack[offset] # instance[i], [i:j], in, for
+    def __getitem__(self, offset):
+        return self.stack[offset] 
     
     def __getattr__(self, name):
-        return getattr(self.stack, name) # instance.sort()/reverse()/..
+        return getattr(self.stack, name)
     

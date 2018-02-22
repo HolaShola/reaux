@@ -4,6 +4,6 @@ def describe_pet(animal_type, pet_name):
 
 describe_pet('dog', 'Shadow')
 
-describe_pet(animal_type = 'cat', pet_name = 'Joe')
+describe_pet(animal_type ='cat', pet_name ='Joe')
 
-describe_pet(pet_name = 'Joe', animal_type = 'cat')
+describe_pet(pet_name ='Joe', animal_type ='cat')

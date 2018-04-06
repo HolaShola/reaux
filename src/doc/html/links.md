@@ -1,3 +1,6 @@
+https://github.com/yangshun/front-end-interview-handbook  
+https://techrocks.ru/2018/03/03/front-end-interview-tutorial/  
+
 Асинхронные скрипты: defer/async
 https://learn.javascript.ru/external-script
 https://habrahabr.ru/company/dataart/blog/304138/
@@ -17,6 +20,10 @@ https://htmlacademy.ru/
 
 ### <title>
 https://developer.mozilla.org/ru/docs/Web/HTML/Element/title
+
+### meta  
+https://developer.mozilla.org/ru/docs/Web/HTML/Element/meta  
+
 
 ### <link>
 https://developer.mozilla.org/ru/docs/Web/HTML/Element/link
@@ -39,4 +46,10 @@ https://www.methodlab.ru/articles/preload_speedup
 https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals
 
 ### <a>
-https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA
+https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA  
+
+### others
+https://bitsofco.de/how-display-contents-works/  
+
+
+

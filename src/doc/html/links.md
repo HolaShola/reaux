@@ -24,6 +24,8 @@ https://developer.mozilla.org/ru/docs/Web/HTML/Element/title
 ### meta  
 https://developer.mozilla.org/ru/docs/Web/HTML/Element/meta  
 
+### viewport  
+https://developer.mozilla.org/ru/docs/Mozilla/Mobile/Viewport_meta_tag  
 
 ### <link>
 https://developer.mozilla.org/ru/docs/Web/HTML/Element/link

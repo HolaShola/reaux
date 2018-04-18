@@ -1,0 +1,10 @@
+.exciting-text::selection { 
+    color: green;
+    background: yellow;
+}
+ 
+.exciting-text::-moz-selection {
+  color: green;
+  background: red;
+}
+ 

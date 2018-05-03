@@ -7,3 +7,7 @@ https://developer.mozilla.org/ru/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_
 
 ### syntax .md  
 https://help.github.com/articles/basic-writing-and-formatting-syntax/  
+
+### вертикальное выравнивание  
+https://habr.com/company/netcracker/blog/277433/  
+

@@ -17,13 +17,15 @@ function applyForVisa(documents) {
 
 function getVisa(visa) {
     console.info('Виза получена');
-    return visa;
+    return new Promise((resolve, reject) => {
+        resolve(visa);
+    });
 }
 
 function bookHotel(visa) {
     console.log(visa);
     console.log('Бронируем отель');
-    return {};
+    return Promise.resolve(visa);
 }
 
 function buyTickets(booking) {

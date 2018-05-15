@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bind main example</title>
+</head>
+<body>
+  <script>
+    function bindFirst(y, z) {
+      return this.x + y + z;  
+    }
+
+    let obj = { x: 1 };
+
+    let bindedFunc = bindFirst.bind(obj, 2);
+
+    console.log(bindedFunc(3));
+    console.log(bindedFunc(5));
+    console.log(bindedFunc(10));
+
+    console.log(bindedFunc.length);  // y + z - y
+  </script>    
+</body>
+</html>

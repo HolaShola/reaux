@@ -1,3 +1,5 @@
+https://www.codecogs.com/latex/eqneditor.php  
+
 $$\sum_{i=1}^n$$
 
 $$\lim_ {i \to \infty}.$$
@@ -21,4 +23,4 @@ $$\lim_ {i \to \infty}.$$
 ### Скалярное произведение двух векторов.  
 ![formula](https://latex.codecogs.com/gif.latex?a%20*%20b%20%3D%20x_1%20*%20y_1%20&plus;%20x_2%20*%20y_2%20&plus;%20...%20&plus;%20x_n%20*%20y_n%20%3D%20%5Cleft%20%7C%20a%20%5Cright%20%7C%20*%20%5Cleft%20%7C%20b%20%5Cright%20%7C%20*%20cos%5Calpha)  
 
-
+![formula](https://latex.codecogs.com/gif.latex?%5Clarge%20%5Cbegin%7Bvmatrix%7D%20x_1_1%20%26%20.%20%26%20.%20%26%20.%20%26%20x_1_m%5C%5C%20.%20%26%20.%20%26%20.%20%26%20.%20%26%20.%5C%5C%20.%20%26%20.%20%26%20.%20%26%20.%20%26%20.%5C%5C%20x_n_1%20%26%20.%20%26%20.%20%26%20.%20%26%20x_n_m%20%5Cend%7Bvmatrix%7D%5E%7BT%7D)

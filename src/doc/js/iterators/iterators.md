@@ -13,4 +13,21 @@
 Для строк отличие for от итераторов – в работе с юникод строками(for некорректно работает с юникод строками)
 Итераторы также используются в for of => for of тоже корректно работает со строчками.  
 
+WeakSet не итерируемый по умолчанию.
 
+                    function isIterable(object) {
+                        return typeof object[Symbol.iterator] === 'function';
+                    }
+
+                    isIterable(new Set()) // true
+                    isIterable(new WeakSet()) // false
+
+Collections:
+ - Array;
+ - Set;
+ - Map;
+
+Collections iterators:
+ - entries();
+ - values();
+ - keys();

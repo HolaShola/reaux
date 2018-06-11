@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-  <script src="./methods/string.js"></script>  
+  <div id="d1"></div>
+  <div id="d2"></div>
+  <script>
+    const divs = document.getElementsByTagName("div");
+    
+    for (let div of divs) {
+        console.log(div.id);  // d1  d2
+    }
+  </script>  
 </body>
 </html>

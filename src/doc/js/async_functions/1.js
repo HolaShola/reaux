@@ -3,3 +3,5 @@ async function asyncFunc() {
 }
 
 asyncFunc();
+
+console.log(asyncFunc[Symbol.toStringTag]);

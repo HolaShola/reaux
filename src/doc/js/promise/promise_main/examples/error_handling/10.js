@@ -12,4 +12,4 @@ function doAsync() {
 
 doAsync()
     .then(value => console.log(`Resolved! ${value}`))
-    .catch(reason => console.log(`in catch: Rejected! ${reason}`));
+    .catch(reason => console.error(`in catch: Rejected! ${reason}`));

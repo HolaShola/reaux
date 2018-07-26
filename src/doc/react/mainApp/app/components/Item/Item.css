@@ -1,0 +1,6 @@
+.wrapperItem {
+    height: 25px;
+    border: 2px solid gray;
+    margin: 2px;
+    cursor: pointer;
+}

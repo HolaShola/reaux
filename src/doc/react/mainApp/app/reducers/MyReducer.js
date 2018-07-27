@@ -1,6 +1,8 @@
 const initialState = {
   first: null,
-  second: {},
+  second: {
+    results: [],
+  },
 };
 
 export default function MyReducer(state = initialState, action) {
@@ -8,7 +10,9 @@ export default function MyReducer(state = initialState, action) {
     case 'FETCH_DATA_RECEIVE':
       return {
         ...state,
-        second: action.payload,
+        second: {
+          results: state.second.results.concat(action.payload.results),
+        },
       };
     default: return state;
   }

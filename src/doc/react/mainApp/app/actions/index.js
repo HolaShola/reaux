@@ -4,6 +4,7 @@ import {
   FETCH_DATA_RECEIVE,
   FETCH_DATA_FAILURE,
 } from '../constants';
+import { apiKey } from '../config';
 
 export const fetchDataRequestStart = () => ({
   type: FETCH_DATA_REQUEST_START,
@@ -27,7 +28,7 @@ export const fetchDataFailure = message => ({
 
 export const fetchMyData = pageNumber => (dispatch) => {
   dispatch(fetchDataRequestStart());
-  fetch(`https://api.themoviedb.org/3/search/movie?api_key=4f7821834291015d1ed75fbd1dab475b&query=love&page=${pageNumber}`)
+  fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=love&page=${pageNumber}`)
     .then((response) => {
       if (!response.ok) {
         throw Error(response.statusText);

@@ -7,7 +7,7 @@ let promise2 = new Promise((resolve, reject) => {
 let promise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(11);
-    }, 995);
+    }, 1000);
 });
 
 Promise.race([promise2, promise1])

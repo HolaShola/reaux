@@ -1,4 +1,6 @@
 https://learn-reactjs.ru/basics/state-and-lifecycle  
+https://github.com/facebook/react/issues/11527#issuecomment-360199710  
+https://medium.com/@WoTzap  
 
 
 ReactDOM.render(<Timer/>, document.getElementById('root'));  
@@ -12,3 +14,7 @@ ReactDOM.render(<Timer/>, document.getElementById('root'));
 4. Благодаря вызову setState(), React знает, что состояние изменилось, и вызывает метод render() снова, чтобы узнать, что должно быть на экране.  
 
 5. Если компонент Timer в какой-то момент удалён из DOM, React вызывает метод componentWillUnmount() жизненного цикла, из-за чего таймер останавливается.
+
+React не обновляет this.state.x до тех пор, пока компонент не будет перерисован
+
+Передача функции обновления позволяет получить доступ к текущему значению состояния компонента внутри неё. Поскольку вызовы setState группируются, это позволяет выстраивать цепочку обновлений и обеспечивать их последовательное выполнение, избегая конфликтов

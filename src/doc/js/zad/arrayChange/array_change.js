@@ -6,11 +6,13 @@
 
 function arrayChange(arr) {
     let res = 0;
+    let diff = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i + 1] > arr[i]) {
+        if (arr[i + 1] > arr[i] + res) {
             continue;
         } else {
             if (arr[i + 1]) {
+                diff = arr[i] - arr[i + 1];
                 res = res + arr[i] - arr[i + 1] + 1;
             }
         }

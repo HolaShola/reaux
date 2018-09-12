@@ -12,3 +12,5 @@ let rightResult = arr.reduceRight((sum, currentValue) => {
 
 console.log(`left - ${leftResult}`);
 console.log(`right - ${rightResult}`);
+
+console.log(arr);

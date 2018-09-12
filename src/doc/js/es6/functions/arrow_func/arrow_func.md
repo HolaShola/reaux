@@ -14,16 +14,16 @@
 В js есть понятие label, и в данном случае id - label  
 
 -------------------------
-document.addEventListener('click', function() {
-    console.log(this);  // document
-});
+                                    document.addEventListener('click', function() {
+                                        console.log(this);  // document
+                                    });
 
-(function() {
-    'use strict'
-    document.addEventListener('click', () => {
-        console.log(this);  // undefined
-    });
-})();
+                                    (function() {
+                                        'use strict'
+                                        document.addEventListener('click', () => {
+                                            console.log(this);  // undefined
+                                        });
+                                    })();
 
 В стрелочной функции this будет указывать на контекст, в котором стрелочная функция объявлена.
 

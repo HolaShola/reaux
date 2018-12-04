@@ -2,21 +2,24 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
-# action = sys.argv[1]
-web_page_address = sys.argv[1]
+def main():
+    web_page_address = sys.argv[1]
 
-response = requests.get("https://" + web_page_address)
+    try:
+        response = requests.get("https://" + web_page_address)
+    except:
+        return print("Wrong webpage address!!!")
+    
+    soup = BeautifulSoup(response.text, "html.parser")
+    tags_dict = {}
 
-soup = BeautifulSoup(response.text, "html.parser")
+    for tag in soup.findAll():
+        if tags_dict.get(tag.name):
+            tags_dict[tag.name] += 1
+        else:
+            tags_dict[tag.name] = 1 
 
-tags_dict = {}
+    print(tags_dict)
 
-for tag in soup.findAll():
-    if tags_dict.get(tag.name):
-        tags_dict[tag.name].append(tag.name)
-    else:
-        tags_dict[tag.name] = [] 
-        tags_dict[tag.name].append(tag.name)
-
-for i, j in tags_dict.items():
-    print(i + ' -', len(j))
+if __name__ == '__main__':
+    main()

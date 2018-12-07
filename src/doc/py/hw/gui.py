@@ -1,19 +1,34 @@
-import tkinter as tk
+from tkinter import *
 import tkinter.ttk as ttk
+from config import *
+from pick import read_data_from_db, write_data_to_db
 
 def gui():
-    root = tk.Tk()
+    root = Tk()
     
-    cb = ttk.Combobox(root, values=("ya.ru", "yandex.ru", "google.com"), width=30)
-    bc = tk.Button(root, text="Выбрать")
-    e = tk.Entry(root, width=50)
-    load_button = tk.Button(root, text="Загрузить")
-    view_from_db = tk.Button(root, text="Показать из базы")
+    firstFrame = Frame(root)
+    firstFrame.pack(side=TOP)
+
+    secondFrame = Frame(root)
+    secondFrame.pack()
+
+    thirdFrame = Frame(root)
+    thirdFrame.pack(side=BOTTOM)
+
+    combobox = ttk.Combobox(firstFrame, values=sites_for_combobox, width=20)
+    bc = Button(firstFrame, text=choose_button)
+
+    e = Entry(secondFrame, width=30)
     
-    cb.pack()
-    bc.pack()
-    e.pack()
-    load_button.pack()
-    view_from_db.pack()
+    load_button = Button(thirdFrame, text=load_from_db, command = lambda: write_data_to_db(combobox.get(), ))
+    view_from_db_button = Button(thirdFrame, text=view_from_db, command = lambda: read_data_from_db(combobox.get()))
+    
+    combobox.grid(row=0)
+    bc.grid(row=0, column=1)
+    
+    e.grid(row=1, column=0)
+    
+    load_button.grid(row=2, column=0)
+    view_from_db_button.grid(row=2, column=1)
     
     root.mainloop()

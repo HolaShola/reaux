@@ -1,5 +1,5 @@
-choose_button = "Выбрать",
-load_from_db = "Загрузить",
+choose_button = "Выбрать"
+load_from_db = "Загрузить"
 view_from_db = "Показать из базы"
 sites_for_combobox = [
     "ya.ru",
@@ -10,3 +10,4 @@ sites_for_combobox = [
     "habr.com",
     "github.com"
 ]
+default_entry_message = "Введите название сайта"

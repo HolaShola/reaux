@@ -21,3 +21,5 @@ Promise.all([p1, p2, p3]).then(value => {
 }, reasone => {
     console.log(reasone)
 });
+
+console.log(p1.length)

@@ -1,6 +1,7 @@
 import unittest
 import requests
-from tagcounter import main
+# from tagcounter import tag_counter
+import tagcounter
 from requests import Response
 from unittest.mock import MagicMock
 from bs4 import BeautifulSoup
@@ -8,9 +9,9 @@ from bs4 import BeautifulSoup
 class TagcounterTestCase(unittest.TestCase):
     def test_tagcounter(self):
         response = Response()
-        response.text = MagicMock(return_value="<div>123</div>")
-        requests.get = MagicMock(return_value=response.text)
-        result = main()
+        tagcounter.requests.get = MagicMock(return_value={"text": "<div>123</div>"})
+        tagcounter.BeautifulSoup = MagicMock(return_value=3)
+        result = tagcounter.tag_counter("")
         self.assertEqual(result, {"div": 1})
 
 unittest.main()
